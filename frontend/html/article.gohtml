@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>{{.Title}}</title>
+    <link rel="icon" type="image/x-icon" href="img/logodark.svg">
+    <base href="{{.BasePath}}">  
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="title" content="{{.Title}}">
+    <meta name="og:title" content="{{.Title}}">
+    <meta name="description" content="{{.Summary}}">
+    <meta name="og:description" content="{{.Summary}}">
+    <link rel="img" src="{{.Image}}">
+    <meta name="og:image" content="{{.Image}}">
+    {{if .Authors}}
+      <meta name="author" content="{{index .Authors 0}}">
+    {{end}}
+    <meta name="keywords" content="{{.Tags}}">
+  </head>
+
+  <body>
+
+    <div class="navigation">
+      <img id="logo" src="img/logodark.svg">
+      <a href="#">Home</a>
+      <a href="html/about.html">About</a>
+    </div>
+
+    <div class="content">
+      <div class="articles">
+        <div class="article">
+
+          <div class="article-header">
+            <h3>{{.Title}}</h3>
+          </div>
+
+          {{if .Image}}
+            <div class="article-image">
+              <img src="{{.Image}}" alt="">
+            </div>
+          {{end}}
+
+          <div class="article-date">
+            <p>{{.Date}}</p>
+            {{if .Modified}}
+              <i>(modified)</i>
+            {{end}}
+          </div>
+
+          <div class="article-authors">
+            {{range .Authors}}
+              <p>{{.}}</p>
+            {{end}}
+          </div>
+
+          <div class="article-tags">
+            {{range .Tags}}
+              <p>{{.}}</p>
+            {{end}}
+          </div>
+
+          {{if .Summary}}
+            <div class="article-summary">
+              <p>{{.Summary}}</p>
+            </div>
+          {{end}}
+
+          <div class="article-body fulltext">
+            {{.Content}}
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <footer>
+    <div class="foot">
+          <a href="html/about.html">ABOUT</a>
+          <a href="html/contact.html">CONTACT</a>
+          <a href="html/legal-notice.html">LEGAL NOTICE</a>
+    </div>
+  </footer>
+
+</html>

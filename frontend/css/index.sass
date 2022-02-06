@@ -1,0 +1,235 @@
+$background-color: #03071E
+$text-color: #EAE2B7
+$secondary-text-color: #F77F00
+$primary-color: #D62828
+$secondary-color: #F77F00
+
+body
+  margin: 0
+  padding: 0
+  display: flex
+  flex-direction: column
+  background-color: $background-color
+  color: $text-color
+
+a
+  color: inherit
+  font-size: 125%
+  text-decoration: none
+  letter-spacing: 2px
+
+p
+  font-size: 150%
+  margin: 0
+
+h3
+  font-size: 200%
+  margin: 0
+
+ul
+  display: flex
+  flex-direction: row
+  font-size: 20px
+  list-style: none
+
+  li
+    padding-right: 30px
+
+ol
+  display: flex
+  flex-direction: column
+  list-style: georgian
+
+.header
+  background-color: $background-color
+  width: 100%
+  height: 100px
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  font-family: 'Roboto', sans-serif
+
+.header-title
+  margin: 100px 0
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  font-family: 'Staatliches', sans-serif
+
+  h1
+    font-size: 90px
+    letter-spacing: 30px
+    margin: 0
+
+  h2
+    font-size: 30px
+    letter-spacing: 10px
+    margin: 0
+
+.divider
+  height: 3px
+  background-color: #ad080f
+
+.navigation
+  background-color: black
+  color: inherit
+  font-family: 'Roboto', sans-serif
+  width: 100%
+  padding-top: 1%
+  padding-bottom: 1%
+  height: 5%
+  min-height: 50px
+  display: flex
+  align-items: center
+
+  img
+    margin-right: auto
+    width: 3%
+    min-width: 30px
+    padding-left: 2.5%
+
+  a
+    padding: 0 2%
+    font-size: 200%
+    font-weight: bolder
+
+.article
+  padding: 2%
+
+  &:hover
+    color: white
+
+.article-body
+  width: 60
+  font-size: 80%
+  font-weight: normal
+  margin-top: 1%
+  font-family: 'Roboto Mono', monospace
+
+.article-body, .article-body-fulltext
+  width: 100%
+
+.article-description
+  font-weight: 500
+  font-family: 'Roboto Mono', monospace
+  color: #D00000
+  font-size: 75%
+  margin-top: 0.5%
+
+  &:p
+    white-space: pre
+
+.articles
+  margin: auto
+  width: 80%
+  font-family: 'Roboto', sans-serif
+
+.foot
+  display: flex
+  align-items: center
+  justify-content: space-between
+  width: 100%
+  margin: 2.5% 0
+
+  a
+    font-family: 'Roboto Mono', monospace
+    font-weight: normal
+    padding: 0 10%
+
+i
+  margin-right: 20px
+
+.about-section
+  font-family: "Roboto", sans-serif
+  width: 60%
+  text-align: center
+  margin:auto
+
+
+
+.legal-section
+  font-family: "Roboto", sans-serif
+  width: 60%
+  margin:auto
+
+
+.legal-section p 
+  margin-bottom: 5%
+
+
+.contact-section 
+  font-family: "Roboto", sans-serif
+  width: 60%
+  margin:auto
+
+
+.contact-section p
+  margin-bottom: 5%
+
+
+input
+    border: 2px solid $primary-color
+    padding: 5px 3px
+    background: $background-color
+    color: $text-color
+    margin: 0 10px
+    font-size: 1rem
+    border-radius: 3px
+    max-width: 200px
+    width: 10%
+    min-width: 100px
+
+
+@media screen and (max-width: 1000px)
+  .navigation
+    flex-direction: column
+
+    img
+      margin: 10px 0
+      padding: 0
+
+    *
+      margin: 5px 0
+
+  .header-title
+    text-align: center
+
+    h1
+      font-size: 50px
+      letter-spacing: 20px
+
+    h2
+      font-size: 20px
+      letter-spacing: 10px
+
+  .articles
+    width: 95%
+
+    div
+      margin: 10px 0
+
+  h3
+    font-size: 130%
+  p
+    font-size: 100%
+
+  .foot
+    flex-direction: column
+
+
+
+@media screen and (max-width: 500px)
+  .header-title
+    h1
+      font-size: 40px
+      letter-spacing: 5px
+
+    h2
+      letter-spacing: 3px
+
+  .article-description
+    p
+      display: flex
+      flex-direction: row
+      justify-content: space-between
