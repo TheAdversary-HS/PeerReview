@@ -72,7 +72,7 @@ Dockerfile:
     Zum Starten auf Linux kann der Folgende Befehl verwendet werden:
         >>> docker build -t theadversary . && docker run -p 8080:8080 theadversary
 
-TheAdversary (Linux) / TheAdversary (Windows):
+TheAdversary (Linux) / TheAdversary.exe (Windows):
     Das kompilierte Backend aus dem backend/ Ordner.
 
 
